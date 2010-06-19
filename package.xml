@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" packagerversion="1.6.2" version="2.0" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
+ <name>sfSyntaxHighlighterPlugin</name>
+ <channel>pear.symfony-project.com</channel>
+ <summary>Syntax Highlighting Plugin.</summary>
+ <description>Adds automatically the javascript code needed to use the
+		SyntaxHighlighter Javascript library.</description>
+ <lead>
+  <name>Miguel Santirso</name>
+  <user>miguelSantirso</user>
+  <email>tirso.00@gmail.com</email>
+  <active>no</active>
+ </lead>
+  <lead>
+  <name>Julien Lafont</name>
+  <user>Julien Lafont</user>
+  <email>julien.lafont@studio-dev.fr</email>
+  <active>yes</active>
+ </lead>
+ <date>2010-06-19</date>
+ <time>11:45:41</time>
+ <version>
+  <release>0.3.0</release>
+  <api>0.3.0</api>
+ </version>
+ <stability>
+  <release>beta</release>
+  <api>beta</api>
+ </stability>
+ <license uri="http://www.symfony-project.org/license">MIT license</license>
+ <notes>-</notes>
+ <contents>
+  <dir name="/">
+	<file name="LICENSE" role="data"/>
+	<file name="README" role="data"/>
+	<file name="config\app.yml" role="data"/>
+	<file name="config\config.php" role="data"/>
+	<file name="lib\sfSyntaxHighlighterToolkit.class.php" role="data"/>
+	<file name="lib\filter\sfSyntaxHighlighterFilter.php" role="data"/>
+	<file name="lib\helper\SyntaxHighlighterHelper.php" role="data"/>
+	<file name="web\css\shCore.css" role="data"/>
+	<file name="web\css\shThemeDefault.css" role="data"/>
+	<file name="web\css\shThemeDjango.css" role="data"/>
+	<file name="web\css\shThemeEclipse.css" role="data"/>
+	<file name="web\css\shThemeEmacs.css" role="data"/>
+	<file name="web\css\shThemeFadeToGrey.css" role="data"/>
+	<file name="web\css\shThemeMidnight.css" role="data"/>
+	<file name="web\css\shThemeRDark.css" role="data"/>
+	<file name="web\images\help.png" role="data"/>
+	<file name="web\images\magnifier.png" role="data"/>
+	<file name="web\images\page_white_code.png" role="data"/>
+	<file name="web\images\page_white_copy.png" role="data"/>
+	<file name="web\images\printer.png" role="data"/>
+	<file name="web\js\clipboard.swf" role="data"/>
+	<file name="web\js\shBrushAda.js" role="data"/>
+	<file name="web\js\shBrushAS3.js" role="data"/>
+	<file name="web\js\shBrushAsm.js" role="data"/>
+	<file name="web\js\shBrushBash.js" role="data"/>
+	<file name="web\js\shBrushColdFusion.js" role="data"/>
+	<file name="web\js\shBrushCpp.js" role="data"/>
+	<file name="web\js\shBrushCSharp.js" role="data"/>
+	<file name="web\js\shBrushCss.js" role="data"/>
+	<file name="web\js\shBrushDelphi.js" role="data"/>
+	<file name="web\js\shBrushDiff.js" role="data"/>
+	<file name="web\js\shBrushErlang.js" role="data"/>
+	<file name="web\js\shBrushFSharp.js" role="data"/>
+	<file name="web\js\shBrushGroovy.js" role="data"/>
+	<file name="web\js\shBrushJava.js" role="data"/>
+	<file name="web\js\shBrushJavaFX.js" role="data"/>
+	<file name="web\js\shBrushJScript.js" role="data"/>
+	<file name="web\js\shBrushLatex.js" role="data"/>
+	<file name="web\js\shBrushLua.js" role="data"/>
+	<file name="web\js\shBrushMatlab.js" role="data"/>
+	<file name="web\js\shBrushObjC.js" role="data"/>
+	<file name="web\js\shBrushPerl.js" role="data"/>
+	<file name="web\js\shBrushPhp.js" role="data"/>
+	<file name="web\js\shBrushPlain.js" role="data"/>
+	<file name="web\js\shBrushPowerShell.js" role="data"/>
+	<file name="web\js\shBrushPython.js" role="data"/>
+	<file name="web\js\shBrushRuby.js" role="data"/>
+	<file name="web\js\shBrushScala.js" role="data"/>
+	<file name="web\js\shBrushSql.js" role="data"/>
+	<file name="web\js\shBrushVb.js" role="data"/>
+	<file name="web\js\shBrushXml.js" role="data"/>
+	<file name="web\js\shBrushYaml.js" role="data"/>
+	<file name="web\js\shCore.js" role="data"/>
+	<file name="web\js\shLegacy.js" role="data"/>
+  </dir>
+ </contents>
+ <dependencies>
+  <required>
+   <php>
+    <min>5.0.0</min>
+   </php>
+   <pearinstaller>
+    <min>1.4.1</min>
+   </pearinstaller>
+   <package>
+	<name>symfony</name>
+	<channel>pear.symfony-project.com</channel>
+	<min>1.3.0</min>
+	<max>1.4.0</max>
+   </package>
+
+  </required>
+ </dependencies>
+ <phprelease/>
+ <changelog>
+  <release>
+   <version>
+    <release>0.3.0</release>
+    <api>0.3.0</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <license uri="http://www.symfony-project.com/license">MIT license</license>
+   <license>MIT</license>
+   <date>2010-06-16</date>
+   <notes>* Julien Lafont: Plugin updated to Symfony 1.4
+   * Julien Lafont : SyntaxHighlighter updated to v2.</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.2.1</release>
+    <api>0.2.1</api>
+   </version>
+   <stability>
+    <release>beta</release>
+    <api>beta</api>
+   </stability>
+   <license uri="http://www.symfony-project.com/license">MIT license</license>
+   <license>MIT</license>
+   <date>2008-08-25</date>
+   <notes>* miguelSantirso: README file corrected.</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.2.0</release>
+    <api>0.2.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <license uri="http://www.symfony-project.com/license">MIT license</license>
+   <license>MIT</license>
+   <date>2008-08-25</date>
+   <notes>* miguelSantirso: added support for BBCode and a helper (see docs)</notes>
+  </release>
+  <release>
+   <version>
+    <release>0.1.0</release>
+    <api>0.1.0</api>
+   </version>
+   <stability>
+    <release>alpha</release>
+    <api>alpha</api>
+   </stability>
+   <license uri="http://www.symfony-project.com/license">MIT license</license>
+   <license>MIT</license>
+   <date>2008-08-23</date>
+   <notes>* miguelSantirso: initial Release</notes>
+  </release>
+ </changelog>
+</package>

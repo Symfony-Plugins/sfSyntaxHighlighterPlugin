@@ -1,0 +1,5 @@
+default:
+
+  # Default theme
+  sfSyntaxHighlighterPlugin:
+    theme: default

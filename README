@@ -1,0 +1,140 @@
+# sfSyntaxHighlighter plugin
+
+The sfSyntaxHighlighterPlugin adds automatically the javascript code needed to use the 
+
+[SyntaxHighlighter](http://alexgorbatchev.com/wiki/SyntaxHighlighter) javascript library.
+
+After installation, you will only need to enable the ``sfSyntaxHighlighterFilter`` in the applications you want.
+
+## Installation
+
+**1.** Install the plugin
+
+    symfony plugin:install http://plugins.symfony-project.com/sfSyntaxHighlighterPlugin
+    symfony plugin:publish-assets
+
+**2.** Modify the ``filters.yml`` file of the application to enable the filter so that the plugin can add the Javascript code at the bottom of every page.
+
+    # insert your own filters here (between security and cache)
+    sf_syntax_highlighter_plugin:
+      class: sfSyntaxHighlighterFilter
+
+**3.** Configure the theme used by the plugin in the ``app.yml`` file of the application
+
+    all:
+      sfSyntaxHighlighterPlugin:
+        theme: default # Consider below to see the list of the available themes
+
+**4.** Clear the cache
+
+    symfony cc
+
+
+## sfSyntaxHighlighterPlugin's basic usage
+
+### Using BBCode
+
+The most simple option is to surround the code you want to highlight 
+with BBCode. For example:
+
+    ...
+    [code="php"]
+        ... some php code here ...
+    [/code]
+
+or
+
+    ...
+    [code lang="php"]
+        ... some php code here ...
+    [/code]
+
+Also, you can use three different BBCode tags that will be automatically recognised:
+
+    ...
+    [code="php"]
+        ... some php code here ...
+    [/code]
+
+    [sourcecode="css"]
+        ... some css code here ...
+    [/sourcecode]
+
+    [source="c++"]
+        ... some C++ code here ...
+    [/source]
+
+Then, the plugin will highlight any code surrounded with that tags. Notice that you have to use one of the aliases for the desired programming languages (see *Supported Highlighting Brushes* at the bottom of this documentation).
+
+
+### Using the library's syntax
+
+You can find the official documentation of the [SyntaxHighlighter](http://alexgorbatchev.com/wiki/SyntaxHighlighter) library in [configuration](http://alexgorbatchev.com/wiki/SyntaxHighlighter:Configuration) section of their wiki.
+
+Place your code on the page and surround it with ``pre`` tag. Set name attribute to code and class attribute to one of the language aliases you wish to use.
+
+    <pre class="brush: php;">
+        ... some code here ...
+    </pre>
+    
+    <pre class="brush: php; collapse: true; toolbar: false">
+        ... some code here ...
+    </pre>
+
+
+## Supported Highlighting Brushes
+
+These are the currently supported [highlighting brushes](http://alexgorbatchev.com/wiki/SyntaxHighlighter:Brushes). The different aliases for every brush are between parenthesis.
+ 
+ * ActionScript 3.0 ('as', 'actionscript', 'actionScript', 'as3', 'AS3')
+ * Bash/shell ('bash', 'shell')
+ * ColdfFusion ('cf', 'coldfusion')
+ * C++ ('cpp', 'c', 'c++')
+ * C# ('c#', 'c-sharp', 'csharp')
+ * CSS ('css')
+ * Delphi ('delphi', 'pascal')
+ * Diff ('diff', 'patch')
+ * Erlang ('erl', 'erlang')
+ * Groovy ('groovy')
+ * Java ('java')
+ * JavaFX ('javafx')
+ * JavaScript ('js', 'jscript', 'javascript')
+ * Perl ('perl', 'pl')
+ * PHP ('php')
+ * Plain Text ('plain', 'text')
+ * PowerShell ('ps', 'powershell')
+ * Python ('py', 'python')
+ * Ruby ('ruby','rails','ror')
+ * Scala ('scala')
+ * SQL ('sql')
+ * Visual Basic ('vb','vb.net')
+ * XML ('xml','xhtml','xslt','html')
+ 
+These are the currently experimental brushes.
+
+ * Ada ('ada')
+ * ASM ('asm', 'x86')
+ * F# ('f#', 'f-sharp', 'fsharp')
+ * Latex ('latex', 'tex')
+ * Lua ('lua')
+ * Matlab ('matlab')
+ * Objective-c ('objc', 'obj-c')
+ * Yaml ('yaml', 'yml')
+ 
+
+## Supported Themes
+
+These are the currently supported [themes](http://alexgorbatchev.com/wiki/SyntaxHighlighter:Themes).
+
+ * Default
+ * Django
+ * Emacs
+ * FadeToGrey
+ * Midnight
+ * RDark 
+
+![all themes](http://www.studio-dev.fr/symfony/sfSyntaxHighlighterPlugin/all_themes.png)
+
+## SyntaxHighlighter version
+
+This plugin uses version 2.0 of [SyntaxHighlighter](http://alexgorbatchev.com/wiki/SyntaxHighlighter).
