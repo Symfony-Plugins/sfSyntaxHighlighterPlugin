@@ -1,8 +1,6 @@
 # sfSyntaxHighlighter plugin
 
-The sfSyntaxHighlighterPlugin adds automatically the javascript code needed to use the 
-
-[SyntaxHighlighter](http://alexgorbatchev.com/wiki/SyntaxHighlighter) javascript library.
+The sfSyntaxHighlighterPlugin adds automatically the javascript code needed to use the [SyntaxHighlighter](http://alexgorbatchev.com/wiki/SyntaxHighlighter) javascript library.
 
 After installation, you will only need to enable the ``sfSyntaxHighlighterFilter`` in the applications you want.
 
@@ -12,6 +10,8 @@ After installation, you will only need to enable the ``sfSyntaxHighlighterFilter
 
     symfony plugin:install http://plugins.symfony-project.com/sfSyntaxHighlighterPlugin
     symfony plugin:publish-assets
+	
+You can also use your svn repository to download the plugin.
 
 **2.** Modify the ``filters.yml`` file of the application to enable the filter so that the plugin can add the Javascript code at the bottom of every page.
 
@@ -30,39 +30,39 @@ After installation, you will only need to enable the ``sfSyntaxHighlighterFilter
     symfony cc
 
 
+	
 ## sfSyntaxHighlighterPlugin's basic usage
 
 ### Using BBCode
 
-The most simple option is to surround the code you want to highlight 
-with BBCode. For example:
+The most simple option is to surround the code you want to highlight with BBCode. For example:
 
-    ...
-    [code="php"]
-        ... some php code here ...
-    [/code]
+...
+[code="php"]
+	... some php code here ...
+[/code]
 
 or
 
-    ...
-    [code lang="php"]
-        ... some php code here ...
-    [/code]
+...
+[code lang="php"]
+	... some php code here ...
+[/code]
 
 Also, you can use three different BBCode tags that will be automatically recognised:
 
-    ...
-    [code="php"]
-        ... some php code here ...
-    [/code]
+...
+[code="php"]
+	... some php code here ...
+[/code]
 
-    [sourcecode="css"]
-        ... some css code here ...
-    [/sourcecode]
+[sourcecode="css"]
+	... some css code here ...
+[/sourcecode]
 
-    [source="c++"]
-        ... some C++ code here ...
-    [/source]
+[source="c++"]
+	... some C++ code here ...
+[/source]
 
 Then, the plugin will highlight any code surrounded with that tags. Notice that you have to use one of the aliases for the desired programming languages (see *Supported Highlighting Brushes* at the bottom of this documentation).
 
@@ -73,15 +73,16 @@ You can find the official documentation of the [SyntaxHighlighter](http://alexgo
 
 Place your code on the page and surround it with ``pre`` tag. Set name attribute to code and class attribute to one of the language aliases you wish to use.
 
-    <pre class="brush: php;">
-        ... some code here ...
-    </pre>
+<pre class="brush: php;">
+	... some code here ...
+</pre>
     
-    <pre class="brush: php; collapse: true; toolbar: false">
-        ... some code here ...
-    </pre>
+<pre class="brush: php; collapse: true; toolbar: false">
+	... some code here ...
+</pre>
 
 
+	
 ## Supported Highlighting Brushes
 
 These are the currently supported [highlighting brushes](http://alexgorbatchev.com/wiki/SyntaxHighlighter:Brushes). The different aliases for every brush are between parenthesis.
@@ -134,6 +135,8 @@ These are the currently supported [themes](http://alexgorbatchev.com/wiki/Syntax
  * RDark 
 
 ![all themes](http://www.studio-dev.fr/symfony/sfSyntaxHighlighterPlugin/all_themes.png)
+
+
 
 ## SyntaxHighlighter version
 

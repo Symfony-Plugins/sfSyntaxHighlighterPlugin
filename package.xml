@@ -5,23 +5,24 @@
  <summary>Syntax Highlighting Plugin.</summary>
  <description>Adds automatically the javascript code needed to use the
 		SyntaxHighlighter Javascript library.</description>
- <lead>
-  <name>Miguel Santirso</name>
-  <user>miguelSantirso</user>
-  <email>tirso.00@gmail.com</email>
-  <active>no</active>
- </lead>
-  <lead>
+   <lead>
   <name>Julien Lafont</name>
   <user>Julien Lafont</user>
   <email>julien.lafont@studio-dev.fr</email>
   <active>yes</active>
  </lead>
+ <lead>
+  <name>Miguel Santirso</name>
+  <user>miguelSantirso</user>
+  <email>tirso.00@gmail.com</email>
+  <active>yes</active>
+ </lead>
+
  <date>2010-06-19</date>
  <time>11:45:41</time>
  <version>
-  <release>0.3.0</release>
-  <api>0.3.0</api>
+  <release>0.3.4</release>
+  <api>0.3.4</api>
  </version>
  <stability>
   <release>beta</release>
@@ -106,10 +107,10 @@
  </dependencies>
  <phprelease/>
  <changelog>
-  <release>
+   <release>
    <version>
-    <release>0.3.0</release>
-    <api>0.3.0</api>
+    <release>0.3.4</release>
+    <api>0.3.4</api>
    </version>
    <stability>
     <release>beta</release>
@@ -119,8 +120,10 @@
    <license>MIT</license>
    <date>2010-06-16</date>
    <notes>* Julien Lafont: Plugin updated to Symfony 1.4
-   * Julien Lafont : SyntaxHighlighter updated to v2.</notes>
+* Julien Lafont: SyntaxHighlighter updated to v2.
+* Julien Lafont: Package corrected</notes>
   </release>
+  
   <release>
    <version>
     <release>0.2.1</release>
