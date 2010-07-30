@@ -63,7 +63,7 @@ class sfSyntaxHighlighterFilter extends sfFilter
     
     // Generate the javascript code to add at the bottom of the page.
     // It contains the javascript initialization code and the javascript inclusions of the used brushes
-    $htmlToAdd = $this->generateHtmlToAddBrush().'\n'.$this->generateInitHtml(); 
+    $htmlToAdd = $this->generateHtmlToAddBrush().''.$this->generateInitHtml(); 
     
     // Add the code right before the </body>
     $new = str_ireplace('</body>', "\n".$htmlToAdd."\n</body>", $old);
@@ -88,8 +88,10 @@ class sfSyntaxHighlighterFilter extends sfFilter
   {
     $html = array();
     $html[] = '<script type="text/javascript" language="javascript">';
+    $html[] = '$(document).ready(function() {';
     $html[] = 'SyntaxHighlighter.config.clipboardSwf = "/sfSyntaxHighlighterPlugin/js/clipboard.swf"';
     $html[] = 'SyntaxHighlighter.all()';
+    $html[] = '});';
     $html[] = '</script>';
     $html = join("\n", $html);
     
